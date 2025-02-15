@@ -21,9 +21,9 @@ export function Footer() {
           </div>
           <div className="wrap-item-footer-navigation">
             {!!langData?.footer?.links?.length &&
-              langData?.footer?.links.map((item) => {
+              langData?.footer?.links.map((item, index) => {
                 return (
-                  <Link to={item.url} className="item-link" key={item.url}>
+                  <Link to={item.url} className="item-link" key={index}>
                     {item?.name}
                   </Link>
                 );
