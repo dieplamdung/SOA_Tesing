@@ -1,0 +1,152 @@
+@use "../../../../styles/variables" as variables;
+
+.wrap-banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 56.25%;
+  display: flex;
+  background: url(../../../../assets/images/bgHomepage.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  position: relative;
+
+  .wrap-navbar-bottom {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    .wrap-icon {
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+      padding: 24px;
+
+      .label {
+        font-size: 18px;
+        font-weight: 600px;
+        line-height: 24px;
+        letter-spacing: 0.9px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      svg {
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: var(--3);
+          }
+        }
+      }
+    }
+  }
+
+  .wrap-icon-chat {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .icon-chat {
+      position: absolute;
+      right: 0px;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      cursor: pointer;
+
+      .icon-mb {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: variables.$tablet-landscape) {
+    .wrap-navbar-bottom {
+      bottom: 40px;
+    }
+
+    .wrap-icon-chat {
+      max-width: 100%;
+
+      .icon-chat {
+        right: 24px;
+      }
+    }
+  }
+
+  @media (max-width: variables.$tablet-portrait) {
+    padding-bottom: 97.36%;
+    .wrap-navbar-bottom {
+      bottom: 20px;
+    }
+
+    .wrap-icon-chat {
+      bottom: 60px;
+
+      .icon-chat {
+        right: 16px;
+      }
+    }
+  }
+
+  @media (max-width: variables.$mobile) {
+    height: 100vh;
+    padding-bottom: 0%;
+    background: url(../../../../assets/images/bgMobile.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .wrap-navbar-bottom {
+      bottom: 40px;
+      gap: 24px;
+      padding: 0px;
+
+      .wrap-icon {
+        width: 102px;
+        padding: 12px;
+
+        .label {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .wrap-icon-chat {
+      bottom: 40px;
+      .icon-chat {
+        width: 34px;
+        height: 34px;
+        .icon-mb {
+          display: block;
+        }
+
+        .icon-dk {
+          display: none;
+        }
+      }
+    }
+  }
+}

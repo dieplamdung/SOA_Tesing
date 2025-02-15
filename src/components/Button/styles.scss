@@ -1,0 +1,31 @@
+.wrap-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 40px;
+  padding: 10px 16px;
+  border-radius: 33px;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: capitalize;
+
+  border: none;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+
+  &:hover {
+    background-color: var(--primary-color-b);
+  }
+}
+
+.button-secondary {
+  background-color: var(--secondary-color);
+  color: var(--sub-title-color);
+}
